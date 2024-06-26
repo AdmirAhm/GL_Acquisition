@@ -21,7 +21,7 @@ protected:
 public:
     DialogEdit(std::vector<Cube>&insts, int nInstances, gui::Control* pView, td::UINT4 wndID = 0)
         : gui::Dialog(pView, { 
-                                {gui::Dialog::Button::ID::Cancel, tr("Cancel")} }, gui::Size(400, 800), wndID)
+                                {gui::Dialog::Button::ID::Cancel, tr("Cancel")} }, gui::Size(400, 600), wndID)
         , _view(insts, nInstances)
     {
         setCentralView(&_view);

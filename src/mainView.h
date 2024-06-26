@@ -67,9 +67,9 @@ public:
         , _measures(td::DataType::int4, gui::LineEdit::Messages::Send)
     {
         _measures.setMaxValue(15);
-        _instances.setMinValue(0);
+        _instances.setMinValue(1);
         _measures.setMinValue(0);
-
+        _instances.setValue(1);
 
         _socket.insert(0, 0, _lblip);
         _socket.insert(0, 1, _ip);

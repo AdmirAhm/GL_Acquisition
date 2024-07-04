@@ -12,6 +12,7 @@ By selecting Edit option, user can set parameters for every cube which include:
 * Initial position, rotation and color
 * Measurement index (starting with 1) for position rotation and color. This declares which measurement changes which value
 * Factor for position, rotation and color. This changes sensitivity cube movement
+
 Run option starts the simulation.
 
 ![Image Alt text](/images/Capture1.PNG "Main Screen")

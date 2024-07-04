@@ -6,18 +6,17 @@ import network
 
 nic=network.WLAN(network.STA_IF)
 nic.active(True)
-#nic.connect('dd-wrt-hello', '')
-nic.connect('Redmi 10', 'mini2022')
+
+nic.connect('', '')
 
 
 while not nic.isconnected():
-    print("Čekam konekciju ...")
+    print("Waiting")
     time.sleep(5)
     
-print("WLAN konekcija uspostavljena")
+print("Connected")
 ipaddr=nic.ifconfig()[0]
-print("Mrežne postavke:")
-print(nic.ifconfig())
+
 
 
 diode_yneg=13
@@ -35,7 +34,7 @@ mma = mma8451.MMA8451(i2c, 28)
 
 timer=Timer(1)
 sock=socket.socket()
-addr=socket.getaddrinfo('192.168.33.218', 44201)[0][-1]
+addr=socket.getaddrinfo('ip', 0)[0][-1]
 sock.connect(addr)
 
 def mjerenje(a):
